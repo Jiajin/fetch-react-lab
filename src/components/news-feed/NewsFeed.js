@@ -43,7 +43,9 @@ class NewsFeed extends Component {
         <div className="parent">
           <Counter></Counter>
           <p className="article-title">{article.title}</p>
-          <p className="article-author">{this.anonymous(article.author)}</p>
+          <p className="article-author">
+            {!article.author ? "Anonymous" : article.author}
+          </p>
           <div className="article-time">
             {new Date(Date.parse(article.publishedAt)).toLocaleString()}
           </div>
