@@ -11,8 +11,8 @@
 }
 .article-content {
   text-align: center;
-  text-justify: inter-word;
   width: 50%;
+  margin: 0 auto;
 }
 .article-title {
   font-weight: bold;

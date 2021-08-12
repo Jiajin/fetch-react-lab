@@ -1,3 +1,4 @@
+import "./Counter.css";
 import React, { useState, useEffect } from "react";
 
 function Counter() {
@@ -9,7 +10,14 @@ function Counter() {
 
   return (
     <div>
-      <p>{count} Likes!</p>
+      <div className="likes">
+        <span className="countertext">{count}</span>
+        <img
+          className="image"
+          src={process.env.PUBLIC_URL + "images/like.jpeg"}
+        ></img>
+      </div>
+
       <button onClick={() => setCount(count + 1)}>+1</button>
       <button onClick={() => setCount(count - 1)}>-1</button>
     </div>

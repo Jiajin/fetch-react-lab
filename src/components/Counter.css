@@ -1,0 +1,13 @@
+.image {
+  width: 30px;
+}
+
+.likes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.countertext {
+  font-size: 20px;
+}

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Counter from "../Counter";
 import "./NewsFeed.css";
+
 class NewsFeed extends Component {
   constructor() {
     super();
@@ -29,14 +30,20 @@ class NewsFeed extends Component {
   }
 
   // TODO: start coding!
-
+  anonymous(author) {
+    if (author == null) {
+      return "anonymous";
+    } else return author;
+  }
   render() {
     return this.state.articles.map((article, i) => {
       // TODO: start coding!
       return (
+        // this return is needed ?
         <div className="parent">
           <Counter></Counter>
           <p className="article-title">{article.title}</p>
+          <p className="article-author">{this.anonymous(article.author)}</p>
           <div className="article-time">
             {new Date(Date.parse(article.publishedAt)).toLocaleString()}
           </div>
